@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isal — Audio Video Engineer & Web Developer</title>
+
+    <!-- Meta SEO -->
+    <meta name="description" content="Portfolio Isal — Audio Video Engineer & Web Developer. Lulusan Teknik Audio Video dengan pengalaman magang, organisasi, elektronika, dan pengembangan web." />
+    <meta name="keywords" content="Audio Video Engineer, Web Developer, Front-End, IT Support, Portfolio, Isal, Magang, HISPALA" />
+    <meta name="author" content="Isal" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ====== LOADER ====== -->
+    <div id="loader" role="status" aria-label="Memuat">
+        <div class="loader-content">
+            <span class="loader-mark">✦</span>
+            <h1>Isal</h1>
+            <p>Membangun solusi digital &amp; sistem elektronik</p>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- ====== NAVIGASI ====== -->
+    <header id="navbar" role="navigation" aria-label="Navigasi utama">
+        <nav class="navbar">
+            <a href="#hero" class="logo" aria-label="Beranda">Muhammad Aljanu Isaldy</a>
+
+            <button id="menuToggle" class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul id="navLinks" class="nav-links">
+                <li><a href="#hero" class="active">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#organization">Organisasi</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+
+            <!-- Tombol Recruiter Mode -->
+            <button id="recruiterBtn" class="recruiter-toggle" aria-label="Buka mode rekruter">
+                📄 Recruiter Mode
+            </button>
+        </nav>
+    </header>
+
+    <!-- ====== KONTEN UTAMA ====== -->
+    <main>
+
+        <!-- ====== HERO ====== -->
+        <section id="hero" class="section hero" data-bg="#0f172a">
+            <div id="spotlight" aria-hidden="true"></div>
+            <canvas id="particles" aria-hidden="true"></canvas>
+
+            <div class="container hero-container">
+                <div class="hero-left">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span> Tersedia untuk kolaborasi
+                    </div>
+                    <h1>
+                        <span class="greeting">Halo, saya</span>
+                        <strong>Isal</strong>
+                        <span class="role-wrap">
+                            <span id="roleTyping">Audio Video Engineer</span>
+                            <span class="cursor" aria-hidden="true">|</span>
+                        </span>
+                    </h1>
+                    <p class="hero-desc">
+                        Menggabungkan keandalan sistem perangkat keras dengan solusi perangkat lunak yang dinamis.
+                        Lulusan Teknik Audio Video dengan pengalaman magang, organisasi, elektronika, dan pengembangan web.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+                        <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="profile-card">
+                        <div class="profile-ring" aria-hidden="true"></div>
+                        <img src="assets/profile/PassFoto.JPG" alt="Foto profil Isal" loading="lazy" />
+                        <div class="profile-status">
+                            <span class="status-dot"></span> Siap bekerja
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indikator scroll -->
+            <div class="scroll-indicator" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <!-- ====== TENTANG ====== -->
+        <section id="about" class="section about" data-bg="#1e1b4b">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <span class="section-tag">Tentang Saya</span>
+                        <h2 class="section-title">Membangun <br />dengan <span>presisi &amp; kreativitas</span></h2>
+                        <p>
+                            Lulusan Teknik Audio Video dengan ketertarikan dalam elektronika, sistem perangkat keras,
+                            dan pengembangan web. Memiliki pengalaman kepemimpinan sebagai <strong>Sekretaris Utama Organisasi Sispala</strong>
+                            serta pengalaman magang sebagai <strong>Teknisi Junior di CV. Sinar Baja Electric</strong>.
+                        </p>
+                        <p>
+                            Berbekal pengalaman di bidang elektronika dan pengembangan web, saya terus mengembangkan kemampuan teknis serta siap berkontribusi dalam menciptakan solusi yang efektif, inovatif, dan berdampak positif.
+                        </p>
+
+                        <!-- ====== PENGALAMAN MAGANG (Accordion) ====== -->
+                        <div class="about-expandable">
+                            <button class="expand-toggle" id="internshipToggle" aria-expanded="false">
+                                <span class="expand-icon">▶</span>
+                                Pengalaman Magang — CV. Sinar Baja Electric
+                            </button>
+                            <div class="expand-content" id="internshipContent">
+                                <div class="expand-inner">
+                                    <p><strong>Posisi:</strong> Teknisi Junior (Magang) — 6 Bulan</p>
+                                    <ul>
+                                        <li>Membantu proses perbaikan dan perawatan perangkat elektronika.</li>
+                                        <li>Melakukan pemeriksaan komponen dan troubleshooting dasar.</li>
+                                        <li>Mendukung teknisi senior dalam kegiatan service dan pengujian perangkat.</li>
+                                        <li>Meningkatkan kemampuan analisis, ketelitian, dan pemecahan masalah teknis.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ====== PENDIDIKAN (Accordion) ====== -->
+                        <div class="about-expandable">
+                            <button class="expand-toggle" id="educationToggle" aria-expanded="false">
+                                <span class="expand-icon">▶</span>
+                                Riwayat Pendidikan — SMKN 1 Sidoarjo
+                            </button>
+                            <div class="expand-content" id="educationContent">
+                                <div class="expand-inner">
+                                    <p><strong>Jurusan:</strong> Teknik Audio Video</p>
+                                    <div class="edu-detail">
+                                        <h5>Kompetensi Keahlian (UKK)</h5>
+                                        <p>Berhasil merakit, menguji, dan menyelesaikan proyek sistem audio power amplifier sesuai standar industri dan spesifikasi teknis.</p>
+                                    </div>
+                                    <div class="edu-detail">
+                                        <h5>Materi &amp; Kompetensi yang Dipelajari</h5>
+                                        <ul>
+                                            <li>Elektronika Analog dan Digital</li>
+                                            <li>Desain Rangkaian Elektronika</li>
+                                            <li>Perbaikan Perangkat Audio Video</li>
+                                            <li>Dasar Mikrokontroler</li>
+                                            <li>Pengukuran dan Pengujian Elektronika</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="4">0</span>
+                                <span class="stat-label">Proyek Utama</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="3">0</span>
+                                <span class="stat-label">Pengalaman (Magang + Org)</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="8">0</span>
+                                <span class="stat-label">Bidang Keahlian</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Komitmen Belajar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-visual">
+                        <div class="about-card">
+                            <div class="about-card-icon">⚡</div>
+                            <h4>Sekretaris Utama SISPALA</h4>
+                            <p>Bertanggung jawab dalam pengelolaan surat-menyurat, dokumentasi kegiatan, penyusunan laporan, dan koordinasi organisasi guna mendukung kelancaran setiap program kerja.</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-icon">🔧</div>
+                            <h4>Teknik Audio Video</h4>
+                            <p>Keahlian dalam perakitan, pemeliharaan, desain PCB, dan troubleshooting sistem elektronik.</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-icon">🌐</div>
+                            <h4>Web Development</h4>
+                            <p>Membangun aplikasi web dinamis dengan HTML, CSS, JavaScript, PHP, dan MySQL.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== ORGANISASI (HISPALA) ====== -->
+        <section id="organization" class="section organization" data-bg="#1a1a2e">
+            <div class="container">
+                <div class="org-header">
+                    <span class="section-tag">Pengalaman Organisasi</span>
+                    <h2 class="section-title">Kepemimpinan &amp; <span>Manajemen</span></h2>
+                    <p class="section-subtitle">Peran sebagai Sekretaris Utama HISPALA (Himpunan Siswa Pecinta Alam) membentuk kemampuan komunikasi, koordinasi, dan administrasi.</p>
+                </div>
+
+                <div class="org-card">
+                    <div class="org-icon">🏕️</div>
+                    <div class="org-content">
+                        <h3>HISPALA — Himpunan Siswa Pecinta Alam</h3>
+                        <p class="org-role">Sekretaris Utama</p>
+                        <div class="org-desc">
+                            <ul>
+                                <li>Mengelola administrasi organisasi secara menyeluruh.</li>
+                                <li>Menyusun surat, proposal, laporan kegiatan, dan dokumentasi organisasi.</li>
+                                <li>Mengatur jadwal rapat serta koordinasi antar anggota dan pengurus.</li>
+                                <li>Membantu perencanaan dan pelaksanaan program kerja organisasi.</li>
+                                <li>Melatih kemampuan kepemimpinan, komunikasi, kerja sama tim, dan manajemen dokumen.</li>
+                            </ul>
+                        </div>
+                        <div class="org-tags">
+                            <span>Kepemimpinan</span>
+                            <span>Administrasi</span>
+                            <span>Koordinasi</span>
+                            <span>Manajemen Dokumen</span>
+                            <span>Komunikasi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline sederhana -->
+                <div class="org-timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">2023</span>
+                        <div class="timeline-content">
+                            <h4>Bergabung HISPALA</h4>
+                            <p>Mulai aktif sebagai anggota dan mengikuti berbagai kegiatan kepencintaalaman.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2024</span>
+                        <div class="timeline-content">
+                            <h4>Menjadi Sekretaris Utama</h4>
+                            <p>Terpilih sebagai sekretaris utama, bertanggung jawab atas administrasi dan koordinasi organisasi.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2025</span>
+                        <div class="timeline-content">
+                            <h4>Laporan Pertanggung Jawaban</h4>
+                            <p>Berhasil Menyelesaikan Laporan kegiatan Organisasi selama Periode tersebut dengan akhir yang memuaskan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== KEahlian ====== -->
+        <section id="skills" class="section skills" data-bg="#064e3b">
+            <div class="container">
+                <div class="skills-header">
+                    <span class="section-tag">Keahlian</span>
+                    <h2 class="section-title">Teknologi &amp; <span>bidang yang dikuasai</span></h2>
+                    <p class="section-subtitle">Perangkat lunak, perangkat keras, dan sistem elektronik yang saya pelajari serta gunakan dalam berbagai proyek.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Software -->
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">💻 Web Developer & Administrative Assistant</h3>
+                        <div class="skill-items">
+                            <div class="skill-card" data-skill="95">
+                                <div class="skill-icon">⚛️</div>
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+                            </div>
+                            <div class="skill-card" data-skill="90">
+                                <div class="skill-icon">🎨</div>
+                                <div class="skill-info">
+                                    <span class="skill-name">CSS3</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+                            </div>
+                            <div class="skill-card" data-skill="80">
+                                <div class="skill-icon">⚡</div>
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+                            </div>
+                            <div class="skill-card" data-skill="75">
+                                <div class="skill-icon">💻</div>
+                                <div class="skill-info">
+                                    <span class="skill-name">Microsoft Word</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+                            </div>
+                            <div class="skill-card" data-skill="70">
+                                <div class="skill-icon">🖥️</div>
+                                <div class="skill-info">
+                                    <span class="skill-name">Microsoft Excel</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hardware -->
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">🔌 Electronics &amp; Hardware</h3>
+                        <div class="skill-items">
+                            <div class="skill-card" data-skill="85">
+                                <div class="skill-icon">🔩</div>
+                                <div class="skill-info">
+                                    <span class="skill-name">Arduino</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+                            </div>
+                            <div class="skill-card" data-skill="80">
+                                <div class="skill-icon">📐</div>
+                                <div class="skill-info">
+                                    <span class="skill-name">Proteus</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+                            </div>
+                            <div class="skill-card" data-skill="88">
+                                <div class="skill-icon">🔊</div>
+                                <div class="skill-info">
+                                    <span class="skill-name">Audio Amplifier Assembly</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+                            </div>
+                            <div class="skill-card" data-skill="82">
+                                <div class="skill-icon">🛠️</div>
+                                <div class="skill-info">
+                                    <span class="skill-name">Troubleshooting</span>
+                                    <span class="skill-percent">82%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
+                            </div>
+                            <div class="skill-card" data-skill="78">
+                                <div class="skill-icon">🔬</div>
+                                <div class="skill-info">
+                                    <span class="skill-name">Electronic Circuit Design</span>
+                                    <span class="skill-percent">78%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== PROYEK ====== -->
+        <section id="projects" class="section projects" data-bg="#172554">
+            <div class="container">
+                <div class="projects-header">
+                    <span class="section-tag">Proyek Unggulan</span>
+                    <h2 class="section-title">Karya yang <span>telah dibangun</span></h2>
+                    <p class="section-subtitle">Setiap proyek mencerminkan dedikasi terhadap kualitas, inovasi, dan pemecahan masalah.</p>
+                </div>
+
+                <!-- Premium Slider Wrapper -->
+                <div class="slider-wrapper" role="region" aria-label="Slider proyek unggulan">
+                    <!-- Slider Track -->
+                    <div class="slider-track" id="sliderTrack">
+                        <!-- Card akan di-generate oleh JavaScript -->
+                    </div>
+
+                    <!-- Navigasi Tombol -->
+                    <button class="slider-btn slider-btn-prev" id="sliderPrev" aria-label="Proyek sebelumnya">
+                        <span class="slider-btn-icon">←</span>
+                    </button>
+                    <button class="slider-btn slider-btn-next" id="sliderNext" aria-label="Proyek berikutnya">
+                        <span class="slider-btn-icon">→</span>
+                    </button>
+
+                    <!-- Indikator Progress -->
+                    <div class="slider-indicators" id="sliderIndicators"></div>
+
+                    <!-- Autoplay Progress Bar -->
+                    <div class="slider-autoplay-bar">
+                        <div class="slider-autoplay-fill" id="autoplayFill"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== KONTAK ====== -->
+        <section id="contact" class="section contact" data-bg="#0a0a0a">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <span class="section-tag">Kontak</span>
+                        <h2 class="section-title">Tertarik bekerja sama? <br /><span>Mari terhubung.</span></h2>
+                        <p class="contact-desc">
+                            Saya terbuka untuk diskusi tentang peluang karier, kolaborasi proyek, atau sekadar bertukar pikiran tentang teknologi dan elektronika.
+                        </p>
+                    </div>
+
+                    <div class="contact-links">
+                        <a href="mailto:aljanuisaldy@gmail.com" class="contact-btn" aria-label="Email">
+                            <span class="contact-btn-icon">✉️</span>
+                            <span class="contact-btn-label">Email</span>
+                            <span class="contact-btn-value">aljanuisaldy@gmail.com</span>
+                        </a>
+                        <a href="https://wa.me/6283833705175" class="contact-btn" aria-label="WhatsApp">
+                            <span class="contact-btn-icon">💬</span>
+                            <span class="contact-btn-label">WhatsApp</span>
+                            <span class="contact-btn-value">083833705175</span>
+                        </a>
+                        <a href="https://github.com/AljanuIsaldy" class="contact-btn" target="_blank" rel="noopener" aria-label="GitHub">
+                            <span class="contact-btn-icon">🐙</span>
+                            <span class="contact-btn-label">GitHub</span>
+                            <span class="contact-btn-value">AljanuIsaldy</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/aljanu-isaldy/" class="contact-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <span class="contact-btn-icon">🔗</span>
+                            <span class="contact-btn-label">LinkedIn</span>
+                            <span class="contact-btn-value">Aljanu Isaldy</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+        <div class="container footer-content">
+            <span class="footer-logo">Muhammad Aljanu Isal</span>
+            <p class="footer-tagline">Audio Video Engineer &amp; Web Developer</p>
+            <p class="footer-copy">&copy; 2026 — Dibangun dengan presisi &amp; dedikasi</p>
+        </div>
+    </footer>
+
+    <!-- ====== RECRUITER MODAL ====== -->
+    <div id="recruiterModal" class="recruiter-modal" role="dialog" aria-modal="true" aria-labelledby="recruiterTitle">
+        <div class="recruiter-overlay" id="recruiterOverlay"></div>
+        <div class="recruiter-content">
+            <button class="recruiter-close" id="recruiterClose" aria-label="Tutup">✕</button>
+
+            <div class="recruiter-header">
+                <span class="recruiter-icon">📄</span>
+                <h2 id="recruiterTitle">Recruiter Mode</h2>
+                <span class="recruiter-badge">CV Preview</span>
+            </div>
+
+            <div class="recruiter-body">
+                <!-- Ringkasan kandidat -->
+                <div class="recruiter-summary">
+                    <div class="recruiter-avatar">
+                        <img src="assets/profile/PassFoto.JPG" alt="Foto Isal" />
+                    </div>
+                    <div class="recruiter-name">
+                        <h3>Muhammad Aljanu Isaldy</h3>
+                        <p>Audio Video Engineer &amp; Web Developer</p>
+                    </div>
+                </div>
+
+                <div class="recruiter-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🎓</span>
+                        <div>
+                            <strong>Pendidikan</strong>
+                            <p>SMKN 1 Sidoarjo — Teknik Audio Video</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🏆</span>
+                        <div>
+                            <strong>Pengalaman</strong>
+                            <p>Sekretaris Utama SISPALA · Magang CV Sinar Baja</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">💻</span>
+                        <div>
+                            <strong>Keahlian</strong>
+                            <p>Web Development · Elektronika · IT Support</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">📁</span>
+                        <div>
+                            <strong>Proyek</strong>
+                            <p>4 Proyek Utama · Bot Telegram · Amplifier TDA2030</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alasan merekrut -->
+                <div class="recruiter-why">
+                    <h4>✨ Mengapa Merekrut Kandidat Ini?</h4>
+                    <ul>
+                        <li>✓ Fondasi teknis yang kuat (hardware + software)</li>
+                        <li>✓ Pengalaman Administrasi dan manajemen tim</li>
+                        <li>✓ Pengalaman magang di industri elektronika</li>
+                        <li>✓ Pembelajar cepat dengan inisiatif tinggi</li>
+                        <li>✓ Proyek praktis yang menunjukkan kemampuan nyata</li>
+                        <li>✓ Adaptif di berbagai bidang (elektronika, IT, produksi)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="recruiter-footer">
+                <a href="assets/cv/CV-Isaldy.pdf" class="recruiter-btn recruiter-btn-primary" download>
+                    ⬇ Download CV (PDF)
+                </a>
+                <a href="#contact" class="recruiter-btn recruiter-btn-secondary" id="recruiterContact">
+                    💬 Hubungi Sekarang
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== MODAL STUDI KASUS ====== -->
+    <div id="caseModal" class="case-modal" role="dialog" aria-modal="true" aria-labelledby="caseModalTitle">
+        <div class="case-modal-overlay" id="caseOverlay"></div>
+        <div class="case-modal-content">
+            <button class="case-modal-close" id="caseClose" aria-label="Tutup">✕</button>
+            <div id="caseModalBody">
+                <!-- Konten dinamis dari JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== JAVASCRIPT ====== -->
+    <script src="js/script.js"></script>
+</body>
+</html>
